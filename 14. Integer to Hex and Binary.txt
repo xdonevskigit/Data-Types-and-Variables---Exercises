@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Demo18._09
+{
+    class HomeWork2109
+    {
+        static void Main(string[] args)
+        {
+            int someNumber = int.Parse(Console.ReadLine());
+
+            var hexa = new StringBuilder();
+            int someNumberTwo = someNumber;
+
+            while (someNumber > 0)
+            {
+                var values = someNumber % 16;
+                someNumber = someNumber / 16;
+                hexa.Insert(0, ((int)values).ToString("X"));
+            }
+            Console.WriteLine(hexa);
+
+            var binary = new StringBuilder();
+
+            while (someNumberTwo > 0)
+            {
+                var values = someNumberTwo % 2;
+                someNumberTwo = someNumberTwo / 2;
+                binary.Insert(0, ((int)values).ToString());
+            }
+            Console.WriteLine(binary);
+        }
+    }
+}

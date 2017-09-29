@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Demo18._09
+{
+    class HomeWork2109
+    {
+        static void Main(string[] args)
+        {
+            string isTrue = Console.ReadLine();
+
+            if (isTrue == "True")
+            {
+                Console.WriteLine("Yes");
+            }
+            else if (isTrue  == "False")
+            {
+                Console.WriteLine("No");
+            }
+            
+        }
+    }
+}

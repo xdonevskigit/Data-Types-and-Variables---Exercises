@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Demo18._09
+{
+    class HomeWork2109
+    {
+        static void Main(string[] args)
+        {
+            int firstNumber = int.Parse(Console.ReadLine());
+            int secondNumber = int.Parse(Console.ReadLine());
+
+            for (int i = firstNumber; i <= secondNumber; i++)
+            {
+                Console.Write((char)i + " ");
+            }
+        }
+    }
+}

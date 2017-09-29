@@ -1,0 +1,91 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Numerics;
+using System.Text;
+
+namespace Demo18._09
+{
+    class HomeWork2109
+    {
+        static void Main(string[] args)
+        {
+            BigInteger mySalary = BigInteger.Parse(Console.ReadLine());
+            string checkSbyte = "";
+            string checkByte = "";
+            string checkShort = "";
+            string checkUshort = "";
+            string checkInt = "";
+            string checkUint = "";
+            string checkLong = "";
+
+             if (mySalary >= -128 && mySalary <= 127)
+            {
+                checkSbyte = "* sbyte";
+            }
+             if (mySalary >= 0 && mySalary <= 255)
+            {
+                checkByte = "* byte";
+            }
+             if (mySalary >= -32768 && mySalary <= 32767)
+            {
+                checkShort = "* short";
+            }
+             if (mySalary >= 0 && mySalary <= 65535)
+            {
+                checkUshort = "* ushort";
+            }
+             if (mySalary >= -2147483648 && mySalary <= 2147483647)
+            {
+                checkInt = "* int";
+            }
+             if (mySalary >= 0 && mySalary <= 4294967295)
+            {
+                checkUint = "* uint";
+            }
+             if (mySalary >= -9223372036854775808 && mySalary <= 9223372036854775807)
+            {
+                checkLong = "* long";
+            }
+
+            if (checkSbyte != "" || checkByte != "" || checkShort != "" ||
+                checkUshort != "" || checkInt != "" || checkUint != "" || checkLong != "")
+            {
+                Console.WriteLine($"{mySalary} can fit in:");
+                if (checkSbyte != "")
+                {
+                    Console.WriteLine(checkSbyte);
+                }
+                if (checkByte != "")
+                {
+                    Console.WriteLine(checkByte);
+                }
+                if (checkShort != "")
+                {
+                    Console.WriteLine(checkShort);
+                }
+                if (checkUshort != "")
+                {
+                    Console.WriteLine(checkUshort);
+                }
+                if (checkInt != "")
+                {
+                    Console.WriteLine(checkInt);
+                }
+                if (checkUint != "")
+                {
+                    Console.WriteLine(checkUint);
+                }
+                if (checkLong != "")
+                {
+                    Console.WriteLine(checkLong);
+                }
+            }
+            else
+            {
+                Console.WriteLine($"{mySalary} can't fit in any type");
+            }
+            
+        }
+    }
+}

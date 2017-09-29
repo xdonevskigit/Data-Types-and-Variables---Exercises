@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Numerics;
+using System.Text;
+
+namespace Demo18._09
+{
+    class HomeWork2109
+    {
+        static void Main(string[] args)
+        {
+            long totalPictures = int.Parse(Console.ReadLine());
+            long filterTime = int.Parse(Console.ReadLine());
+            long filterFactorInProcent = int.Parse(Console.ReadLine());
+            long uploadetTime = int.Parse(Console.ReadLine());
+
+            long allTimeNeeded = totalPictures * filterTime;
+            totalPictures = (int)Math.Ceiling(totalPictures * (filterFactorInProcent * 0.01));
+            allTimeNeeded = allTimeNeeded + (totalPictures * uploadetTime);
+
+           long days = allTimeNeeded / 86400;
+            allTimeNeeded = allTimeNeeded - (days * 86400);
+            long hours = allTimeNeeded / 3600;
+            allTimeNeeded = allTimeNeeded - (hours * 3600);
+            long minutes = allTimeNeeded / 60;
+            allTimeNeeded = allTimeNeeded - (minutes * 60);
+
+            
+
+             Console.WriteLine($"{days}:{hours:D2}:{minutes:D2}:{allTimeNeeded:D2}");
+            
+            
+        }
+    }
+}
